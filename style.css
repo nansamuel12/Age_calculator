@@ -1,0 +1,108 @@
+/* style.css */
+
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    background-color: #a0522d; /* Brown background */
+    margin: 0; /* Remove default body margins */
+    padding: 20px; /* Add some padding around the content */
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.container {
+    background-color: #f8f0e3; /* Light beige/off-white for the container */
+    padding: 40px; /* More padding for a spacious feel */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow for a lifted effect */
+    text-align: center;
+    width: 400px; /* Set a fixed width for better structure */
+    max-width: 90%; /* Ensure it doesn't overflow on smaller screens */
+}
+
+h1 {
+    color: #030303; /* Darker brown for the heading */
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px #5e5a55; /* Subtle text shadow */
+}
+
+.input-fields {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Spacing between input elements */
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5e3a3a; /* Another shade of brown */
+}
+
+input[type="number"],
+select {
+    padding: 12px;
+    border: 1px solid #d2b48c;
+    border-radius: 8px;
+    width: calc(100% - 24px); /* Adjust width for padding */
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+select {
+    appearance: none; /* Remove default arrow */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg fill="%23d2b48c" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 1em;
+}
+
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #8b4513; /* Darker brown on focus */
+    box-shadow: 0 0 5px rgba(139, 69, 19, 0.5); /* Focus shadow */
+}
+
+button {
+    padding: 15px 30px;
+    background-color: #8b4513; /* Darker brown for the button */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #c95e07; /* Slightly lighter brown on hover */
+}
+
+.result  {
+
+    margin-top: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f7f7f7;
+}
+
+/* Optional: Add a subtle pattern to the background */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, rgba(160, 82, 45, 0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none; /* Allows clicks to pass through */
+    z-index: -1; /* Place behind other content */
+}
